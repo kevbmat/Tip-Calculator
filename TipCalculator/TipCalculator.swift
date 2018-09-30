@@ -27,4 +27,11 @@ class TipCalculator {
         self.bill = bill
         self.tipPercent = tipPercent
     }
+    
+    func getNumbersFormatted(number: Double) -> String {
+        let billFormat = NumberFormatter()
+        billFormat.minimumFractionDigits = 2
+        billFormat.maximumFractionDigits = 2
+        return billFormat.string(for: number)!
+    }
 }

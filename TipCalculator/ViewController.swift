@@ -26,15 +26,11 @@ class ViewController: UIViewController {
         let numTipText: Double = Double(tipText), let numBillText: Double = Double(billText) {
             tipCalculatorModel.tipPercent = numTipText * 0.01
             tipCalculatorModel.bill = numBillText
-            tipAmount.text = String(tipCalculatorModel.tipAmount)
-            totalBill.text = String(tipCalculatorModel.totalBillAmount)
+            tipAmount.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.tipAmount)
+            totalBill.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.totalBillAmount)
         } else {
             print("Invaild entry")
         }
     }
-    
-    
-
-
 }
 
