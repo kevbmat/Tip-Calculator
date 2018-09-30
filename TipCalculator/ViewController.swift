@@ -23,7 +23,8 @@ class ViewController: UIViewController {
     
     @IBAction func calculatePressed() {
         if let tipText = tipPercentTextField.text, let billText = billAmountTextField.text,
-        let numTipText: Double = Double(tipText), let numBillText: Double = Double(billText) {
+            let numTipText: Double = Double(tipText), let numBillText: Double = Double(billText) {
+            print("yayaya")
             tipCalculatorModel.tipPercent = numTipText * 0.01
             tipCalculatorModel.bill = numBillText
             tipAmount.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.tipAmount)
