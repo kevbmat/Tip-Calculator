@@ -17,11 +17,11 @@ class TipCalculator {
     var tipPercent: Double
     // calculates how much the user should tip
     var tipAmount: Double {
-        return bill * tipPercent
+        return bill * tipPercent * 0.01
     }
     // calculates the user's total bill
     var totalBillAmount: Double {
-        return bill * tipPercent + bill
+        return bill * tipPercent * 0.01 + bill
     }
     
     // default initializer that sets the bill to be 30 dollars
@@ -40,11 +40,15 @@ class TipCalculator {
     
     // formats the output so that no more or no less
     // than two decimal places are outputed. 
-    func getNumbersFormatted(number: Double) -> String {
-        let billFormat = NumberFormatter()
-        billFormat.numberStyle = .currency
-        billFormat.minimumFractionDigits = 2
-        billFormat.maximumFractionDigits = 2
-        return billFormat.string(for: number)!
+    func getNumbersFormatted(number: Double, isCurrency: Bool) -> String {
+        let format = NumberFormatter()
+        if isCurrency {
+            format.numberStyle = .currency
+        } else {
+            format.numberStyle = .percent
+        }
+        format.minimumFractionDigits = 2
+        format.maximumFractionDigits = 2
+        return format.string(for: number)!
     }
 }

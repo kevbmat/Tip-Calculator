@@ -31,10 +31,12 @@ class ViewController: UIViewController {
             present(alert, animated: true, completion: nil)
             return
         }
-        tipCalculatorModel.tipPercent = numTipText * 0.01
+        billAmountTextField.text = tipCalculatorModel.getNumbersFormatted(number: numBillText, isCurrency: true)
+        tipPercentTextField.text = tipCalculatorModel.getNumbersFormatted(number: numTipText, isCurrency: false)
+        tipCalculatorModel.tipPercent = numTipText
         tipCalculatorModel.bill = numBillText
-        tipAmount.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.tipAmount)
-        totalBill.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.totalBillAmount)
+        tipAmount.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.tipAmount, isCurrency: true)
+        totalBill.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.totalBillAmount, isCurrency: true)
     }
 }
 
