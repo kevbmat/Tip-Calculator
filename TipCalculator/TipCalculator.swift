@@ -18,6 +18,11 @@ class TipCalculator {
         return bill * tipPercent + bill
     }
     
+    init() {
+        bill = 30
+        tipPercent = 20
+    }
+    
     init(bill: Double, tipPercent: Double) {
         self.bill = bill
         self.tipPercent = tipPercent
