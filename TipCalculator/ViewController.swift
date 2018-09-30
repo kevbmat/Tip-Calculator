@@ -22,19 +22,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculatePressed() {
-        if let tipText = tipPercentTextField.text, let billText = billAmountTextField.text,
-            let numTipText: Double = Double(tipText), let numBillText: Double = Double(billText) {
-            tipCalculatorModel.tipPercent = numTipText * 0.01
-            tipCalculatorModel.bill = numBillText
-            tipAmount.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.tipAmount)
-            totalBill.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.totalBillAmount)
-        } else {
+        guard let tipText = tipPercentTextField.text, let billText = billAmountTextField.text,
+        let numTipText: Double = Double(tipText), let numBillText: Double = Double(billText) else {
             let title = "Invalid Entry"
             let message = "Please enter a valid number"
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
+            return
         }
+        tipCalculatorModel.tipPercent = numTipText * 0.01
+        tipCalculatorModel.bill = numBillText
+        tipAmount.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.tipAmount)
+        totalBill.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.totalBillAmount)
     }
 }
+
 
