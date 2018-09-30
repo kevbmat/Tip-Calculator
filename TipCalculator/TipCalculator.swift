@@ -10,7 +10,7 @@
 
 import Foundation
 
-// Model TipCalculator class that keeps track of
+// model TipCalculator class that keeps track of
 // the bill, tip percent, tip amount, and total bill
 class TipCalculator {
     var bill : Double
@@ -39,7 +39,9 @@ class TipCalculator {
     }
     
     // formats the output so that no more or no less
-    // than two decimal places are outputed. 
+    // than two decimal places are outputed. If the value
+    // is a currency, a ($) is added, otherwise a (%)
+    // is added
     func getNumbersFormatted(number: Double, isCurrency: Bool) -> String {
         let format = NumberFormatter()
         if isCurrency {
