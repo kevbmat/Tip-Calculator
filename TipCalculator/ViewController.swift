@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             return
         }
         billAmountTextField.text = tipCalculatorModel.getNumbersFormatted(number: numBillText, isCurrency: true)
-        tipPercentTextField.text = tipCalculatorModel.getNumbersFormatted(number: numTipText, isCurrency: false)
+        tipPercentTextField.text = tipCalculatorModel.getNumbersFormatted(number: numTipText * 0.01, isCurrency: false)
         tipCalculatorModel.tipPercent = numTipText
         tipCalculatorModel.bill = numBillText
         tipAmount.text = tipCalculatorModel.getNumbersFormatted(number: tipCalculatorModel.tipAmount, isCurrency: true)

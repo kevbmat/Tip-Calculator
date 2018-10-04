@@ -98,7 +98,6 @@
                         <outlet property="tipAmount" destination="1qZ-QW-5KO" id="7TB-xd-j5b"/>
                         <outlet property="tipPercentTextField" destination="rWp-4c-YEI" id="qLQ-Xx-HgI"/>
                         <outlet property="totalBill" destination="2fO-7F-8M3" id="gZH-Pa-4U8"/>
-                        <outlet property="view" destination="DP9-oq-y1K" id="V8V-Zp-iPz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
