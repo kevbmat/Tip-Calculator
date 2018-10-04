@@ -39,14 +39,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the bill here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DP9-oq-y1K">
-                                <rect key="frame" x="151" y="138" width="174" height="30"/>
+                                <rect key="frame" x="151" y="138" width="152" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the tip percent here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rWp-4c-YEI">
-                                <rect key="frame" x="151" y="196" width="174" height="30"/>
+                                <rect key="frame" x="151" y="196" width="152" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -72,11 +72,11 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <state key="normal" title="Calculate!"/>
                                 <connections>
-                                    <action selector="calculatePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZx-Mk-n2t"/>
+                                    <action selector="calculatePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="0AA-Gd-Hyb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufL-rJ-iUD">
-                                <rect key="frame" x="109" y="94" width="33" height="32"/>
+                                <rect key="frame" x="109" y="94" width="168" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
@@ -95,9 +95,9 @@
                     </view>
                     <connections>
                         <outlet property="billAmountTextField" destination="DP9-oq-y1K" id="I0z-yA-Gf0"/>
-                        <outlet property="tipAmount" destination="1qZ-QW-5KO" id="gKV-ln-XTB"/>
+                        <outlet property="tipAmount" destination="1qZ-QW-5KO" id="7TB-xd-j5b"/>
                         <outlet property="tipPercentTextField" destination="rWp-4c-YEI" id="qLQ-Xx-HgI"/>
-                        <outlet property="totalBill" destination="2fO-7F-8M3" id="QNL-7B-810"/>
+                        <outlet property="totalBill" destination="2fO-7F-8M3" id="gZH-Pa-4U8"/>
                         <outlet property="view" destination="DP9-oq-y1K" id="V8V-Zp-iPz"/>
                     </connections>
                 </viewController>
